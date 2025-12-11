@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+}
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.menu-icons {
+    display: flex;
+    gap: 20px;
+    width: 200px;
+}
+
+a {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+}
+h2{
+    font-size: 70px;
+}
+.center{
+    margin: 40px;
+}
+.rgb {
+    color: #D1884F;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+
+}
+
+.rgb:hover {
+    color: blue;
+    font-size: 18px;
+}
+
+.Title-main {
+    margin-top: 25px;
+    font-family: 'Roboto';
+    margin-left: 64px;
+    font-size: 40px;
+}
+
+.carrossel {
+    max-width: 90%;
+    height: 400px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item {
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    width: 224px;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.Small img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha-preta {
+    border: none;
+    height: 7px;
+    background-color: black;
+    width: 100%;
+    border-radius: 9%;
+}
+
+.box img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+.display-flex{
+    display: flex;
+    gap: 50px;
+}
+.grid-row {
+    display: flex;
+    gap: 10px;
+}
+.gorda img{
+    height: 800px;
+    width: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.gorda img:hover{
+    transform: scale(1.03);
+}
+.small-bottom{
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+.small-bottom img{
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.small-bottom img:hover{
+    transform: scale(1.03);
+}
+.grid-item {
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 9 / 16; 
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 30px;
+}
+
+.grid-item img:hover {
+    transform: scale(1.03);
+}
+
+.row-top .grid-item {
+    flex-grow: 1; 
+}
+
+.row-top .item-3 {
+    flex-grow: 2; 
+}
+
+.row-bottom .grid-item {
+    flex-grow: 1; 
+}
+
+.row-bottom .item-6,
+.row-bottom .item-7 {
+    flex-grow: 2; 
+}
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #000;
+    width: 100%;
+    gap: 20px;
+}
+
+footer a svg {
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .image-grid-container {
+        padding: 0 10px;
+    }
+    .display-flex,
+    .grid-row,
+    .small-bottom {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .grid-item,
+    .gorda,
+    .small-bottom img {
+        width: 100%;
+        height: auto;
+        flex-grow: 1; 
+        box-shadow: none;
+        margin-bottom: 5px;
+    }
+
+    .grid-item {
+        aspect-ratio: 4 / 3;
+    }
+
+    .gorda img {
+        height: auto;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .small-bottom img {
+        height: auto;
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .gorda,
+    .grid-item {
+        order: initial; 
+    }
+
+    .Title-main {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .carrossel {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .item, .Small {
+        width: 100%;
+        height: auto;
+    }
+
+    .item img, .Small img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .menu-icons{
+        display: flex;
+        gap: 10px;
+        width: 120px;
+    }
+}

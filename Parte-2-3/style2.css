@@ -1,0 +1,135 @@
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color:#111;
+  background:#fff;
+  line-height:1.6;
+
+}
+
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:26px 60px;
+}
+.logo img{ width:60px; display:block }
+nav a{
+  margin-left:26px;
+  text-decoration:none;
+  color:#111;
+  font-size:16px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+nav a.active{ color:#ff914d; font-weight:600 }
+
+
+.container{
+  max-width:1120px;
+  margin:44px auto;
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  padding:0 30px;
+}
+
+
+.texto{ flex:1 }
+.texto h1{
+  font-size:34px;
+  margin-bottom:18px;
+  text-align:center; 
+}
+.texto p{
+  font-size:16px;
+  margin-bottom:12px;
+  color:#222;
+  max-width:520px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.55;
+}
+
+
+.foto-wrapper{
+  position:relative;
+  width:360px;               
+  min-width:240px;
+}
+
+
+.foto-wrapper::before{
+  content:"";
+  position:absolute;
+  left:-34px;       
+  top:-18px;
+  width:120px;
+  height:200px;
+  background:#4fa3ff;  
+  border-radius:6px;
+  z-index:0;
+  box-shadow:0 6px 14px rgba(79,163,255,0.15);
+  transform:translateZ(0);
+}
+
+
+.foto{
+  position:relative;
+  z-index:1; 
+  overflow:hidden;
+  border-radius:0 32px 32px 0; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border:6px solid #fff; 
+  background:#008AAA;
+ 
+}
+
+
+.foto img{
+  display:block;
+  width:360px;
+  height:460px;          
+
+  border-radius:0 26px 26px 0; 
+
+}
+
+footer{
+  margin-top:200px;
+  padding:18px 0 60px;
+  display:flex;
+  justify-content:center;
+  gap:36px;
+  font-size:28px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media (max-width:768px){
+  header{ padding:18px }
+  .container{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .texto h1{ text-align:center }
+  .foto-wrapper{ width:78%; max-width:420px }
+  .foto img{ width:100%; height:auto; aspect-ratio:3/4; }
+  .foto-wrapper::before{
+    left:50%;
+    transform:translateX(-50%) translateY(-8px);
+    top:-10px;
+    width:34%;
+    height:26%;
+  }
+}
