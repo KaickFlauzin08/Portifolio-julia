@@ -66,7 +66,7 @@ O design é otimizado para uma visualização clara e agradável em qualquer dis
 
 1.  **Clone este repositório:**
     ```bash
-   git clone https://github.com/KaickFlauzin08/Portifolio-julia.git
+    git clone [https://github.com/KaickFlauzin08/Portifolio-julia.git]
     ```
 2.  Abra a pasta do projeto no **VS Code**.
 3.  Abra o arquivo `index.html` no seu navegador ou utilize a extensão **Live Server** para visualização e desenvolvimento.
